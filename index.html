@@ -345,7 +345,7 @@ const DEFAULT_RESULTS={
   'B_0_3':{s1:6,s2:0,confirmed:true},  // Canadá 6-0 Qatar               (J2)
   // — J3 Mié 24/06 —
   'B_0_1':{s1:1,s2:2,confirmed:true},  // Canadá X-X Suiza               (J3) — s1=Canadá
-   'B_2_3':{s1:3,s2:1,confirmed:true},  // Bosnia X-X Qatar               (J3) — s1=Bosnia
+  'B_2_3':{s1:3,s2:1,confirmed:true},  // Bosnia X-X Qatar               (J3) — s1=Bosnia
   // ════ GRUPO C ════
   'C_0_1':{s1:1,s2:1,confirmed:true},  // Brasil 1-1 Marruecos           (J1)
   'C_2_3':{s1:1,s2:0,confirmed:true},  // Escocia 1-0 Haití              (J1) s1=Escocia
@@ -422,10 +422,57 @@ const DEFAULT_RESULTS={
   'L_0_3':{s1:4,s2:2,confirmed:true},  // Inglaterra 4-2 Croacia         (J1) s1=Inglaterra
   'L_1_2':{s1:1,s2:0,confirmed:true},  // Ghana 1-0 Panamá               (J1) s1=Ghana
   'L_0_1':{s1:0,s2:0,confirmed:true},  // Inglaterra 0-0 Ghana           (J2)
-  'L_2_3':{s1:0,s2:1,confirmed:true},  //// Panamá 0-1 Croacia             (J2) s1=Panamá
+  'L_2_3':{s1:0,s2:1,confirmed:true},  // Panamá 0-1 Croacia             (J2) s1=Panamá
   // — J3 Sáb 27/06 —
   // 'L_0_2':{s1:0,s2:0,confirmed:true},  // Inglaterra X-X Panamá          (J3) — s1=Inglaterra
   // 'L_1_3':{s1:0,s2:0,confirmed:true},  // Ghana X-X Croacia              (J3) — s1=Ghana
+};
+
+// ═══ RESULTADOS FASE ELIMINATORIA ═══
+// Para agregar un resultado: descomentá la línea y reemplazá los ceros por los goles.
+// s1 = goles equipo de arriba (local visual), s2 = goles equipo de abajo.
+// Los equipos se completan automáticamente según las clasificaciones de grupos.
+const DEFAULT_BRACKET={
+  // ══ RONDA DE 32 · 28 Jun–3 Jul ══
+  // 'r32_1':{s1:0,s2:0},   // P73 · 2°A  vs  2°B
+  // 'r32_2':{s1:0,s2:0},   // P74 · 1°E  vs  3°mejor (A/B/C/D/F)
+  // 'r32_3':{s1:0,s2:0},   // P75 · 1°F  vs  2°C
+  // 'r32_4':{s1:0,s2:0},   // P76 · 1°C  vs  2°F
+  // 'r32_5':{s1:0,s2:0},   // P77 · 1°I  vs  3°mejor (C/D/F/G/H)
+  // 'r32_6':{s1:0,s2:0},   // P78 · 2°E  vs  2°I
+  // 'r32_7':{s1:0,s2:0},   // P79 · 1°A  vs  3°mejor (C/E/F/H/I)
+  // 'r32_8':{s1:0,s2:0},   // P80 · 1°L  vs  3°mejor (E/H/I/J/K)
+  // 'r32_9':{s1:0,s2:0},   // P81 · 1°D  vs  3°mejor (B/E/F/I/J)
+  // 'r32_10':{s1:0,s2:0},  // P82 · 1°G  vs  3°mejor (A/E/H/I/J)
+  // 'r32_11':{s1:0,s2:0},  // P83 · 2°K  vs  2°L
+  // 'r32_12':{s1:0,s2:0},  // P84 · 1°H  vs  2°J
+  // 'r32_13':{s1:0,s2:0},  // P85 · 1°B  vs  3°mejor (E/F/G/I/J)
+  // 'r32_14':{s1:0,s2:0},  // P86 · 1°J  vs  2°H  🇦🇷
+  // 'r32_15':{s1:0,s2:0},  // P87 · 1°K  vs  3°restantes
+  // 'r32_16':{s1:0,s2:0},  // P88 · 2°D  vs  2°G
+
+  // ══ OCTAVOS DE FINAL · 4–7 Jul ══
+  // 'r16_1':{s1:0,s2:0},   // P89 · W(P74) vs W(P77)
+  // 'r16_2':{s1:0,s2:0},   // P90 · W(P73) vs W(P75)
+  // 'r16_3':{s1:0,s2:0},   // P91 · W(P76) vs W(P78)
+  // 'r16_4':{s1:0,s2:0},   // P92 · W(P79) vs W(P80)
+  // 'r16_5':{s1:0,s2:0},   // P93 · W(P83) vs W(P84)
+  // 'r16_6':{s1:0,s2:0},   // P94 · W(P81) vs W(P82)
+  // 'r16_7':{s1:0,s2:0},   // P95 · W(P86) vs W(P88)  🇦🇷
+  // 'r16_8':{s1:0,s2:0},   // P96 · W(P85) vs W(P87)
+
+  // ══ CUARTOS DE FINAL · 9–11 Jul ══
+  // 'qf_1':{s1:0,s2:0},    // P97  · W(P89) vs W(P90)
+  // 'qf_2':{s1:0,s2:0},    // P98  · W(P93) vs W(P94)
+  // 'qf_3':{s1:0,s2:0},    // P99  · W(P91) vs W(P92)
+  // 'qf_4':{s1:0,s2:0},    // P100 · W(P95) vs W(P96)  🇦🇷
+
+  // ══ SEMIFINALES ══
+  // 'sf_1':{s1:0,s2:0},    // P101 · W(P97)  vs W(P99)  — Atlanta 14 Jul
+  // 'sf_2':{s1:0,s2:0},    // P102 · W(P98)  vs W(P100) — Dallas 15 Jul
+
+  // ══ FINAL ══
+  // 'fn':{s1:0,s2:0},      // P104 · W(P101) vs W(P102) — MetLife 19 Jul 🏆
 };
 
 // ═══ RONDA DE 32 — cuadro OFICIAL FIFA WC 2026 (sorteo 5-dic-2025) ═══
@@ -469,15 +516,21 @@ const KOP={
 const KEY='mundial2026_v8';
 let results={};let bracket={};
 function loadData(){
-  try{const d=JSON.parse(localStorage.getItem(KEY)||'null');
-    if(d){results=d.results||{};bracket=d.bracket||{};}
-    else{results={...DEFAULT_RESULTS};bracket={};saveData();}
-  }catch(e){results={...DEFAULT_RESULTS};bracket={};}
+  // Grupos: siempre desde DEFAULT_RESULTS → cada push al repo actualiza a todos
+  results={...DEFAULT_RESULTS};
+  try{
+    const d=JSON.parse(localStorage.getItem(KEY)||'null');
+    // Cuadro: localStorage (predicciones personales) o DEFAULT_BRACKET para nuevos visitantes
+    bracket=d?(d.bracket||{...DEFAULT_BRACKET}):{...DEFAULT_BRACKET};
+  }catch(e){bracket={...DEFAULT_BRACKET};}
 }
-function saveData(){localStorage.setItem(KEY,JSON.stringify({results,bracket}));}
+function saveData(){
+  // Solo persiste el cuadro eliminatorio; los grupos siempre vienen del código
+  localStorage.setItem(KEY,JSON.stringify({bracket}));
+}
 function resetData(){
-  if(!confirm('¿Restablecer todos los resultados al estado inicial?'))return;
-  results={...DEFAULT_RESULTS};bracket={};saveData();renderAll();notify('↩ Restablecido');
+  if(!confirm('¿Restablecer el cuadro eliminatorio a los resultados oficiales?'))return;
+  bracket={...DEFAULT_BRACKET};saveData();renderAll();notify('↩ Restablecido');
 }
 
 // ═══ CÁLCULOS ═══
